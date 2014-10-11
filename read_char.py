@@ -4,14 +4,14 @@
 
 class Read_Char:
 	
-	def __ini__(self):
+	def __init__(self):
 		try:
 			self.instance = Read_Char_Win()
 		except ImportError:
 			self.instance = Read_Char_Nix()
 
 	def __call__(self):
-		return self.instance
+		return self.instance()
 
 
 class Read_Char_Win():
